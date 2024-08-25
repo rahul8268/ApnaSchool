@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>ApnaSchool</display-name>
+  
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+    <description></description>
+    <display-name>StudentUpdateServlet</display-name>
+    <servlet-name>StudentUpdateServlet</servlet-name>
+    <servlet-class>servlet.StudentUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentUpdateServlet</servlet-name>
+    <url-pattern>/StudentUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentDeleteServlet</display-name>
+    <servlet-name>StudentDeleteServlet</servlet-name>
+    <servlet-class>servlet.StudentDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentDeleteServlet</servlet-name>
+    <url-pattern>/StudentDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TecherAddServlet</display-name>
+    <servlet-name>TecherAddServlet</servlet-name>
+    <servlet-class>servlet.TecherAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TecherAddServlet</servlet-name>
+    <url-pattern>/TecherAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TeacherUpdateServlet</display-name>
+    <servlet-name>TeacherUpdateServlet</servlet-name>
+    <servlet-class>servlet.TeacherUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TeacherUpdateServlet</servlet-name>
+    <url-pattern>/TeacherUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TeacherDeleteServlet</display-name>
+    <servlet-name>TeacherDeleteServlet</servlet-name>
+    <servlet-class>servlet.TeacherDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TeacherDeleteServlet</servlet-name>
+    <url-pattern>/TeacherDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HomeServlet</display-name>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>servlet.HomeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/HomeServlet</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
