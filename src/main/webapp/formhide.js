@@ -1,20 +1,17 @@
-let selector=document.querySelector('.formselector');
-
-let form=document.querySelectorAll('.form');
+let selector=document.querySelector("#formselector")
+let forms=document.querySelectorAll(".form")
 
 selector.addEventListener("change",()=>{
-	let formselcter=selector.value;
-	form.forEach(forms=>{
-		
-		if(forms.id==formselector){
-			 forms.style.display = "block";
-		}else{
-			 forms.style.display = "block";
-		}
-	});
-	
-	
-});
-let ved=selector.value
+	let formselectorvalue=selector.value
+	console.log(formselectorvalue)
+	forms.forEach(val =>{
 
-console.log(ved)
+		if(val.id===formselectorvalue){
+			val.style.display="block"
+		}
+		else{
+			val.style.display="none"
+		}
+
+	})
+})

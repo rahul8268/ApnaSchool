@@ -13,11 +13,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="D:/Servers/apache-tomcat-10.0.27/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="D:/Servers/apache-tomcat-10.0.27/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar"/>
 	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/standard.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/javax.servlet.jsp.jstl-api-1.2.1.jar"/>
-	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jstl-impl-1.2.jar"/>
+	<classpathentry kind="lib" path="src/main/webapp/WEB-INF/lib/jstl.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

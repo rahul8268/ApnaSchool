@@ -1,4 +1,4 @@
-<%@page import="javaClass.DataBaseConn"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -12,108 +12,46 @@
 </head>
 <body>
 
-  <ul>
-<li ><a  href="index.jsp" style="color: white">Home</a></li>
-<li>Student
-<div class="drop-down">
-<ul>
-<li ><a href="student.jsp">add</a></li>
-<li><a href="studentUpdate.jsp">Update</a></li>
-<li><a href="studentDelete.jsp">Delete</a></li>
-</ul>
-</div>
-</li>
+ 
+                                <div>
+                                    <ul>
+                                        <li><a href="index.jsp" style="color: white">Home</a></li>
+                                        <li>Student
+                                            <div class="drop-down">
+                                                <ul>
+                                               
+                                                    <li><a href="student.jsp">add</a></li>
+                                                    
+                                               </ul>
+                                            </div>
+                                        </li>
 
 
-<li>Teacher
-<div class="drop-down">
-<ul>
-<li ><a href="teacher.jsp">add</a></li>
-<li><a href="teacherUpdate.jsp">Update</a></li>
-<li><a href="teacherDelete.jsp">Delete</a><li>
-</ul>
-</div>
+                                        <li>Teacher
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="teacher.jsp">add</a></li>
+                                                   
+                                                    <li>
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Class
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
+                                      
+                                        <li>fees
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="fees.jsp">add</a></li>
+                                                   
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Course
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
+                                                                           </ul>
+                                </div>
 
-</li>
-
-<li>Attendance
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Examination
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>fees
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>TimeTable
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-
-<li>class
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-</ul>   
 
 <div class="form1">
 
@@ -141,22 +79,22 @@
             </div>
             <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name">
+                <input type="text" id="first-name" name="first-name" required="required">
             </div>
 
             <div class="form-group">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name" >
+                <input type="text" id="last-name" name="last-name" required="required">
             </div>
 
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" >
+                <input type="date" id="dob" name="dob"  required="required">
             </div>
 
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select id="gender" name="gender" >
+                <select id="gender" name="gender"  required="required">
                     <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -166,17 +104,17 @@
 
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea id="address" name="address" rows="4" ></textarea>
+                <textarea id="address" name="address" rows="2" required="required" ></textarea>
             </div>
 
             <div class="form-group">
                 <label for="contact-info">Parent/Guardian Contact Information</label>
-                <input type="tel" id="contact-info" name="contact-info" inputmode="decimal" >
+                <input type="number" id="contact-info" name="contact-info" inputmode="tel" required="required" >
             </div>
 
             <div class="form-group">
                 <label for="enrollment-date">Enrollment Date</label>
-                <input type="date" id="enrollment-date" name="enrollment-date">
+                <input type="date" id="enrollment-date" name="enrollment-date" required="required"">
             </div>
 
             <div class="form-group">
@@ -199,26 +137,7 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="attendance">Attendance Record</label>
-                <textarea id="attendance" name="attendance" rows="2"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="academic-performance">Academic Performance (Grades/Marks)</label>
-                <textarea id="academic-performance" name="academic-performance" rows="2"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="health-info">Health Information</label>
-                <textarea id="health-info" name="health-info" rows="2"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="extracurricular-activities">Extracurricular Activities</label>
-                <textarea id="extracurricular-activities" name="extracurricular-activities" rows="2"></textarea>
-            </div>
-
+           
             <div class="form-group">
                 <button type="submit">Submit</button>
             </div>

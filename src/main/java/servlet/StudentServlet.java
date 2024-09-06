@@ -46,16 +46,26 @@ public class StudentServlet extends HttpServlet {
 		
 		ArrayList<StudentModal>list=fatchStudent(database);
 		 int i=0;
-		for (i = 0;  i<list.size(); i++);
+		 int checkid=1;
+		 if (list.size()>0) {
+			
+		for (i = 0;  i<list.size()-1; i++);
 		int id=list.get(i).getStudent_id();
-		int checkid=id+1;
+		 checkid=id+1;
 		
 		request.setAttribute("id", checkid);
 		request.getRequestDispatcher("student.jsp").forward(request, response);
 		
 		
 	}
+		 
+	
+	 checkid=1;
+	
+	request.setAttribute("id", checkid);
+	request.getRequestDispatcher("student.jsp").forward(request, response);
 
+	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -135,8 +145,14 @@ public class StudentServlet extends HttpServlet {
 	   
 	    StudentModal modal=fatchDetails(request,response);
 		
-		database.insertStudentInfo(modal);
-		request.setAttribute("reply", "data added success");
+		boolean check=database.insertStudentInfo(modal);
+		
+		if (check) {
+			request.setAttribute("reply", "data added success");
+		}else {
+			request.setAttribute("reply", "data not added");
+		}
+		
 		request.getRequestDispatcher("student.jsp").forward(request, response);
 		
 		

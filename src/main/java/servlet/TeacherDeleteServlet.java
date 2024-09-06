@@ -35,7 +35,7 @@ public class TeacherDeleteServlet extends HttpServlet {
 		
 		String  idString=request.getParameter("id");
 		
-		for (int i = 0; i <list.size()-1; i++) {
+		for (int i = 0; i <list.size(); i++) {
 			int checkid=list.get(i).getId();
 			
 			if (!idString.equals("")) {

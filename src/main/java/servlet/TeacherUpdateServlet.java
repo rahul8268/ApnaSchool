@@ -46,9 +46,7 @@ public class TeacherUpdateServlet extends HttpServlet {
 			String contect=list.get(i).getContectNumber();
 			String hireDate=list.get(i).getHireDate();
 			String department=list.get(i).getDepartment();
-			String subject=list.get(i).getSubjectTaught();
-			String classSedule=list.get(i).getClassSedule();
-			String attandece=list.get(i).getAttendecRecode();
+			
 			
 			
 			
@@ -64,6 +62,9 @@ public class TeacherUpdateServlet extends HttpServlet {
 						request.setAttribute("hireDate",hireDate );
 						request.setAttribute("department",department );
 						request.setAttribute("gender", gender);
+						request.setAttribute("address", address);
+						
+						
 						
 						request.getRequestDispatcher("teacherUpdate.jsp").forward(request, response);
 					} catch (ServletException | IOException e) {

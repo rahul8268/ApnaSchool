@@ -1,161 +1,86 @@
-<%@page import="modal.TeacherModal"%>
-<%@page import="javaClass.TeacherDatabase"%>
-<%@page import="javaClass.StudentDatabase"%>
-<%@page import="modal.StudentModal"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
+<%@page import="modal.TeacherModal" %>
+    <%@page import="javaClass.TeacherDatabase" %>
+        <%@page import="javaClass.StudentDatabase" %>
+            <%@page import="modal.StudentModal" %>
+                <%@page import="java.util.ArrayList" %>
+                    <%@page import="java.util.List" %>
+                        <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"
+                            %>
+                            <!DOCTYPE html>
+                            <html>
 
-   <link rel="stylesheet" href="nav.css">
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="class.css">
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+                            <head>
 
- <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
+                                <link rel="stylesheet" href="nav.css">
+                                <link rel="stylesheet" href="styles.css">
+                                <link rel="stylesheet" href="class.css">
+                                <meta charset="ISO-8859-1">
+                                <title>Insert title here</title>
 
+                                <style>
+                                    table {
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                    }
 
-<div>
-  <ul>
-<li ><a  href="index.html" style="color: white">Home</a></li>
-<li>Student
-<div class="drop-down">
-<ul>
-<li ><a href="student.jsp">add</a></li>
-<li><a href="studentUpdate.jsp">Update</a></li>
-<li><a href="studentDelete.jsp">Delete</a></li>
-</ul>
-</div>
-</li>
+                                    th,
+                                    td {
+                                        border: 1px solid black;
+                                        padding: 8px;
+                                        text-align: left;
+                                    }
+
+                                 
+                                </style>
+                            </head>
+
+                            <body>
 
 
-<li>Teacher
-<div class="drop-down">
-<ul>
-<li ><a href="teacher.jsp">add</a></li>
-<li><a href="teacherUpdate.jsp">Update</a></li>
-<li><a href="teacherDelete.jsp">Delete</a><li>
-</ul>
-</div>
-
-</li>
-
-<li>Class
-<div class="drop-down">
-<ul>
-<li><a href="classm.jsp">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Course
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Attendance
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Examination
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>fees
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>TimeTable
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
+                                <div>
+                                    <ul>
+                                        <li><a href="index.jsp" style="color: white">Home</a></li>
+                                        <li>Student
+                                           
+                                                    <li><a href="student.jsp">add</a></li>
+                                                    
+                                             
+                                     
 
 
-<li >class
-<a href="classm.jsp"></a>
-<div class="drop-down">
-<ul>
+                                        <li>Teacher
+                                            
+                                                    <li><a href="teacher.jsp">add</a></li>
+                                                  
 
+                                       
 
-</ul>
-</div>
+                                      
+                                        <li>fees
+                                            
+                                                    <li><a href="fees.jsp">add</a></li>
+                                                   
+                                              
 
-</li>
-</ul>   
-</div>
+                                                                           </ul>
+                                </div>
 
+                                <select id="formselector">
 
-<select id="formselector">
-
-<option value="selector.disabled">choose an form</option>
-<option value="student">Student</option>
-<option value="teacher">teacher</option>
-</select>
+                                    <option value=""disabled selected>choose an form</option>
+                                    <option value="student">Student</option>
+                                    <option value="teacher">teacher</option>
+                                </select>
 
 
 
 
 
-<div class="student-div form"  style="margin: 10px; padding: 0px;" id="student" >
+                                <div class="student form" style="margin: 10px; padding: 0px;" id="student">
 
-<h1>student info</h1>
+                                    <h1>student info</h1>
 
-<table >
+                                  <table >
 <tr >
 <th >student id  </th>
 <th>First Name </th>
@@ -198,14 +123,14 @@
 
 </table>
 
-</div>
+                                </div>
 
 
 
 
-<div class="student-div form"  style="margin: 10px; padding: 0px; display: none;" id="teacher">
-<h1>Teacher info</h1>
-
+                                <div class="student-div form" id="teacher" style="display: none; margin: 2vw;">
+                                    
+                                    <h1>Teacher info</h1>
 <table >
 <tr >
 <th >Teacher id  </th>
@@ -250,9 +175,11 @@
 
 </table>
 
-<button></button>
+                                  
 
-</div>
+                                </div>
 
-</body>
-</html>
+                                <script src="formhide.js"></script>
+                            </body>
+
+                            </html>

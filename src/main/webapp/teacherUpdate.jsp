@@ -12,108 +12,45 @@
 <body>
 
 
- <ul>
-<li ><a  href="index.html" style="color: white">Home</a></li>
-<li>Student
-<div class="drop-down">
-<ul>
-<li ><a href="student.jsp">add</a></li>
-<li><a href="studentUpdate.jsp">Update</a></li>
-<li><a href="studentDelete.jsp">Delete</a></li>
-</ul>
-</div>
-</li>
+
+                                <div>
+                                    <ul>
+                                        <li><a href="index.html" style="color: white">Home</a></li>
+                                        <li>Student
+                                            <div class="drop-down">
+                                                <ul>
+                                               
+                                                    <li><a href="student.jsp">add</a></li>
+                                                    
+                                               </ul>
+                                            </div>
+                                        </li>
 
 
-<li>Teacher
-<div class="drop-down">
-<ul>
-<li ><a href="teacher.jsp">add</a></li>
-<li><a href="teacherUpdate.jsp">Update</a></li>
-<li><a href="teacherDelete.jsp">Delete</a><li>
-</ul>
-</div>
+                                        <li>Teacher
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="teacher.jsp">add</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Class
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
+                                      
+                                        <li>fees
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="fees.jsp">add</a></li>
+                                                   
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Course
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Attendance
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Examination
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>fees
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>TimeTable
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-
-<li>class
-<div class="drop-down">
-<ul>
-<li><a href="classm.jsp">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-</ul>   
+                                                                           </ul>
+                                </div>
 
 
   <div class="form-container">
@@ -142,66 +79,48 @@
 
             <div class="form-group">
                 <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="fName" value=${fName}>
+                <input type="text" id="first-name" name="fName" value=${fName} required="required">
             </div>
 
             <div class="form-group">
                 <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="lName" value=${lName}>
+                <input type="text" id="last-name" name="lName" value=${lName} >
             </div>
 
             <div class="form-group">
                 <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob" value=${dob}>
+                <input type="date" id="dob" name="dob" value=${dob} required="required">
             </div>
 
             <div class="form-group">
                 <label for="gender">Gender</label>
-                <select id="gender" name="gender" required="required" >
-                    <option value="">Select</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+                <input id="gender" name="gender" required="required" value=${gender} >
+                   
             </div>
 
             <div class="form-group">
                 <label for="address">Address</label>
-                <textarea id="address" name="address" rows="4" >
+                <input id="address" name="address" required="required"  value=${address} >
                 
-                </textarea>
+               
             </div>
 
             <div class="form-group">
                 <label for="contact-info">Contact Information</label>
-                <input type="tel" id="contact-info" name="contactInfo" value=${contectInfo}>
+                <input type="tel" id="contact-info" name="contactInfo" required="required" value=${contectInfo} >
             </div>
 
             <div class="form-group">
                 <label for="hire-date">Hire Date</label>
-                <input type="date" id="hire-date" name="hireDate" value=${hireDate}>
+                <input type="date" id="hire-date" name="hireDate" required="required" value=${hireDate} >
             </div>
 
             <div class="form-group">
                 <label for="department">Department</label>
-                <input type="text" id="department" name="department" value=${department}>
+                <input type="text" id="department" name="department" required="required" value=${department} >
             </div>
 
-            <div class="form-group">
-                <label for="subjects-taught">Subjects Taught</label>
-                <textarea id="subjects-taught" name="subjectTaught" rows="2"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="class-schedule">Class Schedule</label>
-                <textarea id="class-schedule" name="classSchedule" rows="2"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="attendance-record">Attendance Record</label>
-                <textarea id="attendance-record" name="attendanceRecord" rows="2"></textarea>
-            </div>
-
+           
          
 
             <div class="form-group">

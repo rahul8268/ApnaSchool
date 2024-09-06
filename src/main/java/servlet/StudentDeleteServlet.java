@@ -36,9 +36,10 @@ public class StudentDeleteServlet extends HttpServlet {
 		StudentDatabase database=new StudentDatabase();
 		ArrayList<StudentModal>list= database.fatchStudent();
 		
-		for (int i = 0; i < list.size(); i++) {
+		for (int i = 0; i <list.size(); i++) {
 			int st_id=list.get(i).getStudent_id();
-			
+			System.out.println(i);
+			System.out.println(list.size());
 			if (id==st_id) {
 				
 				 boolean check=database.deleteStudent(id);

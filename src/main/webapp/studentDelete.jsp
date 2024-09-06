@@ -11,108 +11,46 @@
 <body>
 
 
- <ul>
-<li ><a  href="index.html" style="color: white">Home</a></li>
-<li>Student
-<div class="drop-down">
-<ul>
-<li ><a href="student.jsp">add</a></li>
-<li><a href="studentUpdate.jsp">Update</a></li>
-<li><a href="studentDelete.jsp">Delete</a></li>
-</ul>
-</div>
-</li>
+
+                                <div>
+                                    <ul>
+                                        <li><a href="index.jsp" style="color: white">Home</a></li>
+                                        <li>Student
+                                            <div class="drop-down">
+                                                <ul>
+                                               
+                                                    <li><a href="student.jsp">add</a></li>
+                                                    
+                                               </ul>
+                                            </div>
+                                        </li>
 
 
-<li>Teacher
-<div class="drop-down">
-<ul>
-<li ><a href="teacher.jsp">add</a></li>
-<li><a href="teacherUpdate.jsp">Update</a></li>
-<li><a href="teacherDelete.jsp">Delete</a><li>
-</ul>
-</div>
+                                        <li>Teacher
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="teacher.jsp">add</a></li>
+                                                   
+                                                    <li>
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Class
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
+                                      
+                                        <li>fees
+                                            <div class="drop-down">
+                                                <ul>
+                                                    <li><a href="fees.jsp">add</a></li>
+                                                   
+                                                </ul>
+                                            </div>
 
-</li>
+                                        </li>
 
-<li>Course
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
+                                                                           </ul>
+                                </div>
 
-</li>
-
-<li>Attendance
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>Examination
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>fees
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-<li>TimeTable
-<div class="drop-down">
-<ul>
-<li><a href="classm.html">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-
-
-<li>class
-<div class="drop-down">
-<ul>
-<li><a href="classm.jsp">add</a></li>
-<li>update</li>
-<li>delete</li>
-</ul>
-</div>
-
-</li>
-</ul>   
 
  <div class="form-container">
         <h2>Delete Student Data</h2>

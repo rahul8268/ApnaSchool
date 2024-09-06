@@ -15,7 +15,7 @@ public class StudentDatabase {
     PreparedStatement pstatement=null;
     Statement statement=null;
 	
-	public void insertStudentInfo(StudentModal modal) {
+	public boolean insertStudentInfo(StudentModal modal) {
 		
 		conn=dataBaseConn.CheckConn();
 		if (conn!=null) {
@@ -48,6 +48,7 @@ public class StudentDatabase {
 				System.out.println("data insrted");
 				conn.close();
 				
+				return true;
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -60,6 +61,7 @@ public class StudentDatabase {
 			
 			
 		}
+		return false;
 		
 	}
 	
@@ -96,7 +98,7 @@ public class StudentDatabase {
 				        StudentModal modal=new StudentModal(id,fname,lname,dob,gender,address,contect,information,enrollmentdob,grade);
 				        studentList.add(modal);
 				        
-				        
+				        System.out.println(id);
 						
 						
 						
@@ -127,16 +129,16 @@ public class StudentDatabase {
 		
 		
 		pstatement=conn.prepareStatement(query);
-		pstatement.setInt(1, modal.getStudent_id());
-		pstatement.setString(2, modal.getStudent_fname());
-		pstatement.setString(3, modal.getStudent_lname());
-		pstatement.setString(4, modal.getStudent_dob());
-		pstatement.setString(5, modal.getStudent_gender());
-		pstatement.setString(6, modal.getStudent_address());
-		pstatement.setString(7, modal.getStudent_parentcontect());
-		pstatement.setString(8, modal.getStudent_information());
-		pstatement.setString(9, modal.getStudent_enrollmentdob());
-		pstatement.setString(10, modal.getStudent_grade());
+		pstatement.setInt(0, modal.getStudent_id());
+		pstatement.setString(1, modal.getStudent_fname());
+		pstatement.setString(2, modal.getStudent_lname());
+		pstatement.setString(3, modal.getStudent_dob());
+		pstatement.setString(4, modal.getStudent_gender());
+		pstatement.setString(5, modal.getStudent_address());
+		pstatement.setString(6, modal.getStudent_parentcontect());
+		pstatement.setString(7, modal.getStudent_information());
+		pstatement.setString(8, modal.getStudent_enrollmentdob());
+		pstatement.setString(9, modal.getStudent_grade());
 		
 		
 		pstatement.executeUpdate();

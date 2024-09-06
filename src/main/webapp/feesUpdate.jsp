@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>student info</title>
+<title>Insert title here</title>
 <link rel="stylesheet" href="nav.css">
 <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
+
 
 
                                 <div>
@@ -51,86 +51,73 @@
                                                                            </ul>
                                 </div>
 
+<form action="FeesUpdateServlet" method="get">
+ <div class="form-group">
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id"  required="required" value=${student} >
+            </div>
+            
+            
+             <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+</form>
+ 
 
-
-     
-   <div class="form-container">
-        <h2>Update Student Data</h2>
+ <div class="container">
+        <h2>Student Fees Management Form</h2>
         
-        <h2 style="color: green;">
+        
+          <h2 style="color: green;">
          <%
         if(request.getAttribute("reply")!=null){
         out.println(request.getAttribute("reply"));
+        
+      
         }
         %>
-        
         </h2>
-        <form action="UpdateServlet" method="get">
+        <form action="FeesUpdateServlet" method="post">
+        
          <div class="form-group">
-                <label for="student-id">Student ID</label>
-                <input type="text" id="student-id" name="student-id" required="required" value=${id}>
-                </div>
-       <button type="submit">verify</button>
-     </form>
-        <form action="UpdateServlet" method="POST">
+                <label for="studentId">Student ID</label>
+                <input type="text" id="id" name="id" readonly="readonly" value=${student} >
+            </div>
+            
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" readonly="readonly" value=${studentName} >
+            </div>
            
             <div class="form-group">
-                <label for="student-id">Student ID</label>
-                <input type="text" id="student-id" name="student-id" required="required" value=${id}>
-              </div>
-                
-          <div class="form-group">
-                <label  for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first-name" value=${first_name}>
+                <label for="class">class</label>
+                <input type="text" id="class" name="course" value=${course} >
             </div>
-
             <div class="form-group">
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last-name"  value=${last_name} >
+                <label for="paymentAmount">Payment Amount</label>
+                <input type="number" id="paymentAmount" name="paymentAmount" required>
             </div>
-
+            
+             <div class="form-group">
+                <label for="paymentDate">Payment Date</label>
+                <input type="date" id="paymentDate" name="paymentDate" >
+            </div>
             <div class="form-group">
-                <label for="dob">Date of Birth</label>
-                <input type="date" id="dob" name="dob"  value=${dob}>
+                <label for="paymentMethod">Payment Method</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="Cash">Cash</option>
+                    <option value="CreditCard">Credit Card</option>
+                    <option value="DebitCard">Debit Card</option>
+                    <option value="BankTransfer">Bank Transfer</option>
+                    <option value="UPI">UPI</option>
+                </select>
             </div>
-
             <div class="form-group">
-                <label for="gender">Gender</label>
-                <input id="gender" name="gender"   required="required" value=${gender} >
-                   
-             
-            </div>
-
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input id="address" name="address"  required="required" value=${address} >
-            </div>
-
-            <div class="form-group">
-                <label for="contact-info">Parent/Guardian Contact Information</label>
-                <input type="tel" id="contact-info" name="contact-info" value=${contect}>
-            </div>
-
-            <div class="form-group">
-                <label for="enrollment-date">Enrollment Date</label>
-                <input type="date" id="enrollment-date" name="enrollment-date"  value=${enrollment}>
-            </div>
-
-            <div class="form-group">
-                <label for="grade">Grade/Class</label>
-                <input type="text" id="grade" name="grade"  value=${grade}>
-            </div>
-
-           
-           <div class="form-group">
-                <button type="submit">Update</button>
+                <button type="submit" name="button" value="fsubmit">Submit Payment</button>
             </div>
         </form>
-        
-        
-       
-        
     </div>
-
+ 
 </body>
 </html>

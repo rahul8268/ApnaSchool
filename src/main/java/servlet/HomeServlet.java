@@ -27,11 +27,23 @@ public class HomeServlet extends HttpServlet {
 		
 		System.out.println("hello i am home sevlet");
 	
-		StudentDatabase database=new StudentDatabase();
-		ArrayList<StudentModal>list=database.fatchStudent();
 		
-		request.setAttribute("list", list);
-		request.getRequestDispatcher("index.jsp").forward(request, response);
+			
+		String nameString=request.getParameter("button");
+		System.out.println(nameString);
+		
+		if ("tedit".equals(nameString)) {
+			request.getRequestDispatcher("teacherUpdate.jsp").forward(request, response);
+		}else if ("tdelete".equals(nameString)) {
+			request.getRequestDispatcher("teacherDelete.jsp").forward(request, response);
+		}else  if ("sedit".equals(nameString)) {
+			request.getRequestDispatcher("studentUpdate.jsp").forward(request, response);
+		}else  if ("sdelete".equals(nameString)) {
+			request.getRequestDispatcher("studentDelete.jsp").forward(request, response);
+		}else {
+			request.getRequestDispatcher("feesUpdate.jsp").forward(request, response);
+		}
+		
 	}
 
 }

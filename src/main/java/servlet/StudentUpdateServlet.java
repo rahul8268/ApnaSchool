@@ -37,11 +37,11 @@ public class StudentUpdateServlet extends HttpServlet {
 		int id=Integer.parseInt(request.getParameter("student-id"));
 		
 		System.out.println(id);
-		for (int i=1;i<studentList.size();i++) {
+		for (int i=0;i<studentList.size();i++) {
 			
 			System.out.println(studentList.size());
 			if (id==studentList.get(i).getStudent_id()) {
-			
+			  System.out.println(studentList.get(i).getStudent_id());
 				request.setAttribute("id", studentList.get(i).getStudent_id());
 				request.setAttribute("last_name", studentList.get(i).getStudent_lname());
 				request.setAttribute("gender", studentList.get(i).getStudent_gender());
@@ -50,6 +50,7 @@ public class StudentUpdateServlet extends HttpServlet {
 				request.setAttribute("enrollment",studentList.get(i).getStudent_enrollmentdob());
 				request.setAttribute("first_name",studentList.get(i).getStudent_fname());
 				request.setAttribute("contect", studentList.get(i).getStudent_parentcontect());
+				request.setAttribute("address", studentList.get(i).getStudent_address());
 				request.getRequestDispatcher("studentUpdate.jsp").forward(request, response);
 				
 				
